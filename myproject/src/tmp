@@ -1,0 +1,6 @@
+<el-select v-model="listQuery.groupId" @change="selectGoodsByGroupId($event)" clearable placeholder="请选择设备组" filterable>
+      <el-option v-for="item in deviceGroups" :label="item.groupName" :key="item.id" :value="item.id"></el-option>
+    </el-select>
+    <el-select v-model="listQuery.goodsId" clearable placeholder="请选择商品" filterable>
+      <el-option v-for="item in goods" :label="item.goodsName" :key="item.id" :value="item.id"></el-option>
+    </el-select>
